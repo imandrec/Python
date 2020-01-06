@@ -1,5 +1,6 @@
 import pandas as pd
-ecom = pd.read_csv('Ecommerce Purchases')
+#Ecommerce Purchases is in the same folder
+ecom = pd.read_csv('Ecommerce Purchases') 
 #What is the average Purchase Price?
 ecom['Purchase Price'].mean()
 #What were the highest and lowest purchase prices?
