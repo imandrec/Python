@@ -31,7 +31,6 @@ fig
 fig = plt.figure()
 ax = fig.add_axes([0,0,1,1])
 ax2 = fig.add_axes([0.2,0.5,.4,.4])
-#Now use x,y, and z arrays to recreate the plot below. Notice the xlimits and y limits on the inserted plot
 ax.plot(x,z)
 ax.set_xlabel('X')
 ax.set_ylabel('Z')
