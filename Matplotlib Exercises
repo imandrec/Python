@@ -27,7 +27,7 @@ ax2.set_xlabel('x')
 ax2.set_ylabel('y')
 fig
 
-#3.Create the plot below by adding two axes to a figure object at [0,0,1,1] and [0.2,0.5,.4,.4]
+#3.Create a plot by adding two axes to a figure object at [0,0,1,1] and [0.2,0.5,.4,.4]
 fig = plt.figure()
 ax = fig.add_axes([0,0,1,1])
 ax2 = fig.add_axes([0.2,0.5,.4,.4])
@@ -42,7 +42,7 @@ ax2.set_xlim(20,22)
 ax2.set_ylim(30,50)
 fig
 
-#4.Use plt.subplots(nrows=1, ncols=2) to create the plot below & plot (x,y) and (x,z) on the axes.
+#4.Use plt.subplots(nrows=1, ncols=2) to create a plot & plot (x,y) and (x,z) on the axes.
 # Empty canvas of 1 by 2 subplots
 fig, axes = plt.subplots(nrows=1, ncols=2)
 axes[0].plot(x,y,color="blue", lw=3, ls='--')
