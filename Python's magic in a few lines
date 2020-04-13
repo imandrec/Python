@@ -1,0 +1,7 @@
+import pandas as pd
+import seaborn as sns
+%matplotlib inline
+data = pd.read_csv('bank_note_data.csv')
+data.head()
+sns.countplot(x='Class',data=data)
+sns.pairplot(data,hue='Class')
