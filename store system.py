@@ -26,6 +26,9 @@ lblInfo.grid(row=0,column=0)
 lblInfo = Label(Box, font=("arial",15),text=localtime,fg="#ABEBC6", bd=10, anchor="w")
 lblInfo.grid(row=1,column=0)
 
+lblReference = Label(Box1, font=("arial",15),text="reference", bd=10, anchor="w")
+lblReference.grid(row=0,column=0)
+
 #calculator
 text_input = StringVar()
 txtDisplay = Entry(Box2,font=("arial", 20), textvariable=text_input, bd=10, insertwidth=1, bg="#FFFFFF", justify="right")
