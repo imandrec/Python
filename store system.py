@@ -10,10 +10,10 @@ root.title("Restaurant system")
 Box = Frame(root, width = 1600,height = 50,bg="red", relief=SUNKEN)
 Box.pack(side=TOP)
 
-Box1 = Frame(root, width = 800,height = 700,bg="#ABEBC6", relief=SUNKEN)
+Box1 = Frame(root, width = 800,height = 700, relief=SUNKEN)
 Box1.pack(side=LEFT)
 
-Box2 = Frame(root, width = 300,height = 700,bg="#ABEBC6", relief=SUNKEN)
+Box2 = Frame(root, width = 300,height = 700, relief=SUNKEN)
 Box2.pack(side=RIGHT)
 
 #Time function
@@ -26,18 +26,81 @@ lblInfo.grid(row=0,column=0)
 lblInfo = Label(Box, font=("arial",15),text=localtime,fg="#ABEBC6", bd=10, anchor="w")
 lblInfo.grid(row=1,column=0)
 
-#Left side
-Shirts = StringVar()
+#products & invoice
 invoice = StringVar()
-lblInvoice = Label(Box1, font=("arial",15),text="Invoice no.", bd=10, anchor="w")
-lblInvoice.grid(row=0,column=0)
-txtInvoice=Entry(Box1, font=("arial",15),textvariable=invoice, bd=10, insertwidth=4, bg="#82E0AA", justify = "right")
-txtInvoice.grid(row=0,column=1)
+Coats = StringVar()
+Shirts = StringVar()
+Shorts = StringVar()
+Socks = StringVar()
+Shoes = StringVar()
 
-lblShirts = Label(Box1, font=("arial",15),text="Shirts", bd=10, anchor="w")
-lblShirts.grid(row=1,column=0)
-txtShirts=Entry(Box1, font=("arial",15),textvariable=Shirts, bd=10, insertwidth=4, bg="#82E0AA", justify = "right")
-txtShirts.grid(row=1,column=1)
+lblInvoice = Label(Box1, font=("arial",15),text="Invoice no.", bd=5, anchor="w")
+lblInvoice.grid(row=0,column=0)
+txtInvoice=Entry(Box1, font=("arial",15),textvariable=invoice, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtInvoice.grid(row=0,column=1, padx=10, pady=10)
+
+lblCoats = Label(Box1, font=("arial",15),text="Coats", bd=5, anchor="w")
+lblCoats.grid(row=1,column=0)
+txtCoats=Entry(Box1, font=("arial",15),textvariable=Coats, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtCoats.grid(row=1,column=1, padx=10, pady=10)
+
+lblShirts = Label(Box1, font=("arial",15),text="Shirts", bd=5, anchor="w")
+lblShirts.grid(row=2,column=0)
+txtShirts=Entry(Box1, font=("arial",15),textvariable=Shirts, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtShirts.grid(row=2,column=1, padx=10, pady=10)
+
+lblShorts = Label(Box1, font=("arial",15),text="Shorts", bd=5, anchor="w")
+lblShorts.grid(row=3,column=0)
+txtShorts=Entry(Box1, font=("arial",15),textvariable=Shorts, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtShorts.grid(row=3,column=1, padx=10, pady=10)
+
+lblSocks = Label(Box1, font=("arial",15),text="Socks", bd=5, anchor="w")
+lblSocks.grid(row=4,column=0)
+txtSocks=Entry(Box1, font=("arial",15),textvariable=Socks, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtSocks.grid(row=4,column=1, padx=10, pady=10)
+
+lblShoes = Label(Box1, font=("arial",15),text="Shoes", bd=5, anchor="w")
+lblShoes.grid(row=5,column=0)
+txtShoes=Entry(Box1, font=("arial",15),textvariable=Shoes, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtShoes.grid(row=5,column=1, padx=10, pady=10)
+
+#products & invoice 2nd column
+Glasses = StringVar()
+Watches = StringVar()
+Bracelets = StringVar()
+Subtotal = StringVar()
+Taxes = StringVar()
+Total = StringVar()
+
+lblGlasses = Label(Box1, font=("arial",15),text="Glasses", bd=5, anchor="w")
+lblGlasses.grid(row=0,column=2)
+txtGlasses=Entry(Box1, font=("arial",15),textvariable=Glasses, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtGlasses.grid(row=0,column=3, padx=10, pady=10)
+
+lblWatches = Label(Box1, font=("arial",15),text="Watches", bd=5, anchor="w")
+lblWatches.grid(row=1,column=2)
+txtWatches=Entry(Box1, font=("arial",15),textvariable=Watches, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtWatches.grid(row=1,column=3, padx=10, pady=10)
+
+lblBracelets = Label(Box1, font=("arial",15),text="Bracelets", bd=5, anchor="w")
+lblBracelets.grid(row=2,column=2)
+txtBracelets=Entry(Box1, font=("arial",15),textvariable=Bracelets, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtBracelets.grid(row=2,column=3, padx=10, pady=10)
+
+lblSubtotal = Label(Box1, font=("arial",15),text="Subtotal", bd=5, anchor="w")
+lblSubtotal.grid(row=3,column=2)
+txtSubtotal=Entry(Box1, font=("arial",15),textvariable=Subtotal, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtSubtotal.grid(row=3,column=3, padx=10, pady=10)
+
+lblTaxes = Label(Box1, font=("arial",15),text="Taxes", bd=5, anchor="w")
+lblTaxes.grid(row=4,column=2)
+txtTaxes=Entry(Box1, font=("arial",15),textvariable=Taxes, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtTaxes.grid(row=4,column=3, padx=10, pady=10)
+
+lblTotal = Label(Box1, font=("arial",15),text="Total", bd=5, anchor="w")
+lblTotal.grid(row=5,column=2)
+txtTotal=Entry(Box1, font=("arial",15),textvariable=Total, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
+txtTotal.grid(row=5,column=3, padx=10, pady=10)
 
 #calculator
 text_input = StringVar()
