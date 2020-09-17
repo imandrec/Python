@@ -10,7 +10,7 @@ root.title("Restaurant system")
 Box = Frame(root, width = 1600,height = 50,bg="red", relief=SUNKEN)
 Box.pack(side=TOP)
 
-Box1 = Frame(root, width = 800,height = 700,bg="red", relief=SUNKEN)
+Box1 = Frame(root, width = 800,height = 700,bg="#ABEBC6", relief=SUNKEN)
 Box1.pack(side=LEFT)
 
 Box2 = Frame(root, width = 300,height = 700,bg="#ABEBC6", relief=SUNKEN)
@@ -26,8 +26,18 @@ lblInfo.grid(row=0,column=0)
 lblInfo = Label(Box, font=("arial",15),text=localtime,fg="#ABEBC6", bd=10, anchor="w")
 lblInfo.grid(row=1,column=0)
 
-lblReference = Label(Box1, font=("arial",15),text="reference", bd=10, anchor="w")
-lblReference.grid(row=0,column=0)
+#Left side
+Shirts = StringVar()
+invoice = StringVar()
+lblInvoice = Label(Box1, font=("arial",15),text="Invoice no.", bd=10, anchor="w")
+lblInvoice.grid(row=0,column=0)
+txtInvoice=Entry(Box1, font=("arial",15),textvariable=invoice, bd=10, insertwidth=4, bg="#82E0AA", justify = "right")
+txtInvoice.grid(row=0,column=1)
+
+lblShirts = Label(Box1, font=("arial",15),text="Shirts", bd=10, anchor="w")
+lblShirts.grid(row=1,column=0)
+txtShirts=Entry(Box1, font=("arial",15),textvariable=Shirts, bd=10, insertwidth=4, bg="#82E0AA", justify = "right")
+txtShirts.grid(row=1,column=1)
 
 #calculator
 text_input = StringVar()
