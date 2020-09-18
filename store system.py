@@ -102,14 +102,40 @@ lblTotal.grid(row=5,column=2)
 txtTotal=Entry(Box1, font=("arial",15),textvariable=Total, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
 txtTotal.grid(row=5,column=3, padx=10, pady=10)
 
-#Button total
-btnTotal=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Total", bg="red", command=invoice).grid(row=7, column=1)
+#invoice number
+def Ref():
+    x = random.randint(100, 999)
+    randomRef = str(x)
+    rand.set(randomRef)
 
-#Button total
-btnReset=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Rejset", bg="red", command=invoice).grid(row=7, column=2)
+#Reset
+def Reset():
+    invoice.set("")
+    Coats.set("")
+    Shirts.set("")
+    Shorts.set("")
+    Socks.set("")
+    Shoes.set("")
+    Glasses.set("")
+    Watches.set("")
+    Bracelets.set("")
+    Subtotal.set("")
+    Taxes.set("")
+    Total.set("")
+
+
+#Exit
+def qExit():
+    root.destroy()
+
+#Button Total
+btnTotal=Button(Box1,padx=16,pady=16, fg="black",font=('arial',20), width=10, text="Total", bg="red", command= Ref).grid(row=7, column=1)
+
+#Button Reset
+btnReset=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Reset", bg="red", command=Reset).grid(row=7, column=2)
 
 #Button Exit
-btnExit=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Exit", bg="red", command=eExit).grid(row=7, column=3)
+btnExit=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Exit", bg="red", command=qExit).grid(row=7, column=3)
 
 #calculator
 text_input = StringVar()
@@ -135,29 +161,6 @@ def btnEqual():
     sumup =str(eval(operator))
     text_input.set(sumup)
     operator=""
-
-#invoice number
-def Num():
-    x = random.invoiceint(100, 999)
-    randomNum = str(x)
-    invoice.set(randomNum)
-
-def eExit():
-    root.destroy()
-
-def Reset():
-    invoice.set("")
-    Coats.set("")
-    Shirts.set("")
-    Shorts.set("")
-    Socks.set("")
-    Shoes.set("")
-    Glasses.set("")
-    Watches.set("")
-    Bracelets.set("")
-    Subtotal.set("")
-    Taxes.set("")
-    Total.set("")
 
 #row 1 calculator
 btn7=Button(Box2,padx=16,pady=16,bd=8, fg="black", font=('arial',20),text="7",bg="#82E0AA", command=lambda: btnClick(7)) .grid(row=2,column=0)
