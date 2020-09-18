@@ -26,6 +26,61 @@ lblInfo.grid(row=0,column=0)
 lblInfo = Label(Box, font=("arial",15),text=localtime,fg="#ABEBC6", bd=10, anchor="w")
 lblInfo.grid(row=1,column=0)
 
+#functionality
+def Ref():
+    x = random.randint(100, 999)
+    randomRef = str(x)
+    rand.set(randomRef)
+
+    CoA =float(Coats.get())
+    CoB =float(Shirts.get())
+    CoC =float(Shorts.get())
+    CoD =float(Socks.get())
+    CoE =float(Shoes.get())
+    CoF =float(Glasses.get())
+    CoG =float(Watches.get())
+    CoH =float(Bracelets.get())
+
+    CostofCoats = CoA * 20.00
+    CostofShirts = CoB * 15.00
+    CostofShorts = CoC * 17.50 
+    CostofSocks = CoD * 9.50
+    CostofShoes = CoE * 36.00
+    CostofGlasses = CoF * 13.50
+    CostofWatches = CoG * 27.50
+    CostosBracelets = CoH * 7.00
+
+    CostofShopping = "$", str("%.2f" % (CostofCoats + CostofShirts + CostofShorts + CostofSocks + CostofShoes + CostofGlasses + CostofWatches + CostosBracelets))
+
+    PayTax = ((CostofCoats + CostofShirts + CostofShorts + CostofSocks + CostofShoes + CostofGlasses + CostofWatches + CostosBracelets) * 0.2)
+
+    TotalCost = (CostofCoats + CostofShirts + CostofShorts + CostofSocks + CostofShoes + CostofGlasses + CostofWatches + CostosBracelets)
+
+    OverAllCost = "$", str("%.2f" % (PayTax + TotalCost))
+    PaidTax = "$", str("%.2f" % PayTax)
+    Taxes.set(PaidTax)
+    Subtotal.set(CostofShopping)
+    Total.set(OverAllCost)
+
+#Reset
+def Reset():
+    rand.set("")
+    Coats.set("")
+    Shirts.set("")
+    Shorts.set("")
+    Socks.set("")
+    Shoes.set("")
+    Glasses.set("")
+    Watches.set("")
+    Bracelets.set("")
+    Subtotal.set("")
+    Taxes.set("")
+    Total.set("")
+
+#Exit
+def qExit():
+    root.destroy()
+
 #products & invoice
 rand = StringVar()
 Coats = StringVar()
@@ -101,63 +156,6 @@ lblTotal = Label(Box1, font=("arial",15),text="Total", bd=5, anchor="w")
 lblTotal.grid(row=5,column=2)
 txtTotal=Entry(Box1, font=("arial",15),textvariable=Total, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
 txtTotal.grid(row=5,column=3, padx=10, pady=10)
-
-#invoice number
-def Ref():
-    x = random.randint(100, 999)
-    randomRef = str(x)
-    rand.set(randomRef)
-
-    CoA =float(Coats.get())
-    CoB =float(Shirts.get())
-    CoC =float(Shorts.get())
-    CoD =float(Socks.get())
-    CoE =float(Shoes.get())
-    CoF =float(Glasses.get())
-    CoG =float(Watches.get())
-    CoH =float(Bracelets.get())
-
-    CostofCoats = CoA * 20.00
-    CostofShirts = CoB * 15.00
-    CostofShorts = CoC * 17.50 
-    CostofSocks = CoD * 9.50
-    CostofShoes = CoE * 36.00
-    CostofGlasses = CoF * 13.50
-    CostofWatches = CoG * 27.50
-    CostosBracelets = CoH * 7.00
-
-    CostofShopping = "$", str("%.2f" % (CostofCoats + CostofShirts + CostofShorts + CostofSocks + CostofShoes + CostofGlasses + CostofWatches + CostosBracelets))
-
-    PayTax = ((CostofCoats + CostofShirts + CostofShorts + CostofSocks + CostofShoes + CostofGlasses + CostofWatches + CostosBracelets) * 0.2)
-
-    TotalCost = (CostofCoats + CostofShirts + CostofShorts + CostofSocks + CostofShoes + CostofGlasses + CostofWatches + CostosBracelets)
-
-    OverAllCost = "$", str("%.2f" % (PayTax + TotalCost))
-    PaidTax = "$", str("%.2f" % PayTax)
-    Subtotal.set(CostofShopping)
-    Tax.set(PaidTax)
-    Subtotal.set(CostofShopping)
-    Total.set(OverAllCost)
-
-#Reset
-def Reset():
-    rand.set("")
-    Coats.set("")
-    Shirts.set("")
-    Shorts.set("")
-    Socks.set("")
-    Shoes.set("")
-    Glasses.set("")
-    Watches.set("")
-    Bracelets.set("")
-    Subtotal.set("")
-    Taxes.set("")
-    Total.set("")
-
-
-#Exit
-def qExit():
-    root.destroy()
 
 #Button Total
 btnTotal=Button(Box1,padx=16,pady=16, fg="black",font=('arial',20), width=5, text="Total", bg="#FFFFFF", command= Ref).grid(row=7, column=1)
