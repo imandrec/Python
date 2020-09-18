@@ -7,13 +7,13 @@ root = Tk ()
 root.geometry("1600x800")
 root.title("Restaurant system")
 
-Box = Frame(root, width = 1600,height = 50,bg="red", relief=SUNKEN)
+Box = Frame(root, width = 1600,height = 50, relief=SUNKEN)
 Box.pack(side=TOP)
 
-Box1 = Frame(root, width = 800,height = 700, relief=SUNKEN)
+Box1 = Frame(root, width = 800,height = 700, relief=SUNKEN , padx=100, pady=0)
 Box1.pack(side=LEFT)
 
-Box2 = Frame(root, width = 300,height = 700, relief=SUNKEN)
+Box2 = Frame(root, width = 300,height = 700, relief=SUNKEN, padx=200, pady=10)
 Box2.pack(side=RIGHT)
 
 #Time function
@@ -102,6 +102,15 @@ lblTotal.grid(row=5,column=2)
 txtTotal=Entry(Box1, font=("arial",15),textvariable=Total, bd=5, insertwidth=4, bg="#82E0AA", justify = "right")
 txtTotal.grid(row=5,column=3, padx=10, pady=10)
 
+#Button total
+btnTotal=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Total", bg="red", command=invoice).grid(row=7, column=1)
+
+#Button total
+btnReset=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Rejset", bg="red", command=invoice).grid(row=7, column=2)
+
+#Button Exit
+btnExit=Button(Box1,padx=16, pady=16, fg="black", font=('arial',20), width=10, text="Exit", bg="red", command=eExit).grid(row=7, column=3)
+
 #calculator
 text_input = StringVar()
 txtDisplay = Entry(Box2,font=("arial", 20), textvariable=text_input, bd=10, insertwidth=1, bg="#FFFFFF", justify="right")
@@ -126,6 +135,29 @@ def btnEqual():
     sumup =str(eval(operator))
     text_input.set(sumup)
     operator=""
+
+#invoice number
+def Num():
+    x = random.invoiceint(100, 999)
+    randomNum = str(x)
+    invoice.set(randomNum)
+
+def eExit():
+    root.destroy()
+
+def Reset():
+    invoice.set("")
+    Coats.set("")
+    Shirts.set("")
+    Shorts.set("")
+    Socks.set("")
+    Shoes.set("")
+    Glasses.set("")
+    Watches.set("")
+    Bracelets.set("")
+    Subtotal.set("")
+    Taxes.set("")
+    Total.set("")
 
 #row 1 calculator
 btn7=Button(Box2,padx=16,pady=16,bd=8, fg="black", font=('arial',20),text="7",bg="#82E0AA", command=lambda: btnClick(7)) .grid(row=2,column=0)
