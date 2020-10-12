@@ -11,8 +11,6 @@ while connect != AdminPassword:
         break
        
 conn = sqlite3.connect('pass_manager.db')
-#encode() : Converts the string into bytes to be acceptable by hash function.
-#hexdigest() : Returns the encoded data in hexadecimal format.
 def createPassword(passKey, service, adminPass):
     return sha256(adminPass.encode('utf-8') + service.lower().encode('utf-8') + passKey.encode('utf-8')).hexdigest()[:15]
 
