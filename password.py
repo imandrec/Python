@@ -16,7 +16,7 @@ def createPassword(passKey, service, adminPass):
 
 def get_hex_key(adminPass, service):
     return sha256(adminPass.encode('utf-8') + service.lower().encode('utf-8')).hexdigest()
-
+#output
 def getPassword(adminPass, service):
     secretKey = get_hex_key(adminPass, service)
     cursor = conn.execute("SELECT * from KEYS WHERE passKey=" + "" + secretKey + "")
