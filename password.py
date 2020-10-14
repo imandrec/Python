@@ -10,7 +10,6 @@ while connect != AdminPassword:
     if connect == "q":
         break
 
-#connecting to database sqlite3
 conn = sqlite3.connect('pass_manager.db')
 def createPassword(passKey, service, adminPass):
     return sha256(adminPass.encode('utf-8') + service.lower().encode('utf-8') + passKey.encode('utf-8')).hexdigest()[:15]
