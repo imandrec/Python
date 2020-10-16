@@ -21,4 +21,3 @@ def getPassword(adminPass, service):
     secretKey = get_hex_key(adminPass, service)
     cursor = conn.execute("SELECT * from KEYS WHERE passKey=" + "" + secretKey + "")
     
-    #password
