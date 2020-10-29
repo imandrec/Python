@@ -34,7 +34,6 @@ for x in range(MAX_LEN - 4):
     temp_pass_list = array.array(&# 039;u&# 039;, temp_pass) 
     random.shuffle(temp_pass_list) 
   
-# traved array and append the chars 
 password = "" 
 for x in temp_pass_list: 
         password = password + x 
