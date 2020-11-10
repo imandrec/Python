@@ -1,6 +1,5 @@
 from tkinter import*
 
-#To make sure that is gonna appear 
 root = Tk ()
 root.geometry("1600x800")
 root.title("Calculator")
