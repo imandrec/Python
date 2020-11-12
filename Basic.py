@@ -1,4 +1,3 @@
-#What is 7 to the power of 4 using lambda
 t=lambda var: var**4
 print(t(7))
 
