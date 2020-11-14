@@ -1,5 +1,3 @@
-# Simple game in python
-
 print('Countries and capitals quiz!')
 print('Do your best :)')
 
