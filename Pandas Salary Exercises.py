@@ -1,5 +1,5 @@
 import pandas as pd
-#Salaries.csv Datasets is in the same folder or can be downloaded from (https://www.kaggle.com/kaggle/sf-salaries)
+
 df = pd.read_csv('Salaries.csv')
 #Average BasePay
 df['BasePay'].mean()
