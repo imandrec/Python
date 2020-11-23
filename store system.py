@@ -26,7 +26,6 @@ lblInfo.grid(row=0,column=0)
 lblInfo = Label(Box, font=("arial",15),text=localtime,fg="#ABEBC6", bd=10, anchor="w")
 lblInfo.grid(row=1,column=0)
 
-#functionality
 def Ref():
     x = random.randint(100, 999)
     randomRef = str(x)
