@@ -12,3 +12,9 @@ type(tuple1)
 print(tuple1[0])
 print(tuple1[1])
 print(tuple1[2])
+
+# Print the type of value on each index
+
+print(type(tuple1[0]))
+print(type(tuple1[1]))
+print(type(tuple1[2]))
