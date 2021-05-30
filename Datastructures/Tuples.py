@@ -26,3 +26,8 @@ tuple1[-1]
 # Use negative index to get the value of the second last element
 
 tuple1[-2]
+
+# Use negative index to get the value of the third last element
+
+tuple1[-3]
+
