@@ -31,3 +31,7 @@ tuple1[-2]
 
 tuple1[-3]
 
+# Concatenate two tuples
+
+tuple2 = tuple1 + ("hard rock", 10)
+tuple2
