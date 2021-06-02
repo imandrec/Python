@@ -82,4 +82,48 @@ print("Element 4, 1 of Tuple: ",   NestedT[4][1])
 
 NestedT[2][1][0]
 
+# Print the second element in the second nested tuples
+
+NestedT[2][1][1]
+
+# Print the first element in the second nested tuples
+
+NestedT[4][1][0]
+
+# Print the second element in the second nested tuples
+
+NestedT[4][1][1]
+
+# sample tuple
+
+genres_tuple = ("pop", "rock", "soul", "hard rock", "soft rock", \
+                "R&B", "progressive rock", "disco") 
+genres_tuple
+
+# Write your code below and press Shift+Enter to execute
+
+len(genres_tuple)
+
+
+# Use slicing to obtain indexes 3, 4 and 5
+
+genres_tuple[3:6]
+
+#Find the first two elements of the tuple genres_tuple
+
+genres_tuple[0:2]
+
+#Find the first index of "disco"
+
+genres_tuple.index("disco")
+
+#Generate a sorted List from the Tuple C_tuple=(-5, 1, -3)
+
+C_tuple = (-5, 1, -3)
+C_list = sorted(C_tuple)
+C_list
+
+
+
+
 
