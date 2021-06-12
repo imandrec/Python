@@ -8,7 +8,7 @@ for line in fh:
 text = fh.read()
 print (text.upper())
 
-#option 
+#option 2
 fname = input("Enter file name: ")
 fh = open(fname)
 for line in fh:
