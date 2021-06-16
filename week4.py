@@ -38,10 +38,12 @@ print(x)
 
 #option 1 
 
-fname = input("Enter file name: ")
-fh = open(fname)
+name = input("Enter file:")
+if len(name) < 1:
+    name = "mbox-short.txt"
+handle = open(name)
 count = 0
-for line in fh:
+for line in handle:
    if line.startswith("From: "):
         words = line.split()        
         print(words[1])  
