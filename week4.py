@@ -36,7 +36,28 @@ print(x)
 #Then print out a count at the end.
 #Hint: make sure not to include the lines that start with 'From:'. Also look at the last line of the sample output to see how to print the count.
 
+#option 1 
 
+fname = input("Enter file name: ")
+fh = open(fname)
+count = 0
+for line in fh:
+   if line.startswith("From: "):
+        words = line.split()        
+        print(words[1])  
+        count = count + 1
+print("There were", count,"lines in the file with From as the first word")
+
+#option 2
+
+fname = input("Enter file name: ")
+fh = open(fname)
+for line in fh:
+    line = line.rstrip()
+    words = line.split()
+    if len(words) < 3 or words[0] != "From":
+        continue
+    print(words[2])
 
 
 
