@@ -83,6 +83,7 @@ from efficientnet_pytorch import EfficientNet
 #Define the Dataset class to pair images and labels
 
 class Dataset(data.Dataset):
+	
     def __init__(self,csv_path,images_path,transform=None):
         self.train_set=pd.read_csv(csv_path) #Read The CSV and create the dataframe
         self.train_path=images_path #Images Path
