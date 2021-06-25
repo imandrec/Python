@@ -3,7 +3,6 @@
 # In[ ]:
 
 
-#PyTorch Version: 1.7.1
 
 
 # In[ ]:
