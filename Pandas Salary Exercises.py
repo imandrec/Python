@@ -17,7 +17,7 @@ df[df['TotalPayBenefits']== df['TotalPayBenefits'].min()]
 df.groupby('Year').mean()['BasePay']
 #How many unique job titles are there?
 df['JobTitle'].nunique()
-#What are the top 5 most common jobs?
+#What are the top 5 most common jobs
 df['JobTitle'].value_counts().head(5)
 #How many Job Titles were represented by only one person in 2013? 
 sum(df[df['Year']==2013]['JobTitle'].value_counts() == 1)
