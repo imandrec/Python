@@ -1,4 +1,4 @@
-# Python3 code to demonstrate
+# code to demonstrate
 # Getting current date and time using
 # now().
 	
