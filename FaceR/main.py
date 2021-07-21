@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-# In[ ]:
 
 
 import numpy as np 
