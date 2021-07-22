@@ -11,7 +11,6 @@ train_dataset=pd.read_csv(os.path.join(BASE_PATH,'train_labels.csv'))
 test_dataset=pd.read_csv(os.path.join(BASE_PATH,'test_labels.csv'))
 
 
-# In[ ]:
 
 
 # Check the head of the train_dataset dataframe
