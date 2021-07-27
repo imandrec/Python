@@ -42,7 +42,6 @@ for i in range(1,rows*columns+1):
 plt.show()
 
 
-# In[ ]:
 
 
 #Import various libraries for CNN based image classification
