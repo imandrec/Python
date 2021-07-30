@@ -26,7 +26,7 @@ test_dataset.head(3)
 # In[ ]:
 
 
-#Plot Images to take a look at the X-Ray images
+#Plot Images to take a look at the X-Ray pics
 from PIL import Image
 from matplotlib.pyplot import imshow
 import matplotlib.pyplot as plt
