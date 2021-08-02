@@ -40,7 +40,7 @@ def caught_speeding(speed, is_birthday):
         return 'No Ticket';
 print(caught_speeding(81,True));
 
-#Create a function that counts the number of times the word "dog" occurs in a string. Again ignore edge cases
+#Create a function that counts the number of times the word "dog" occurs in a string
 def countDog(st):
     count = 0
     for word in st.lower().split():
