@@ -13,7 +13,7 @@ print(d['k1'][3]['tricky'][3]['target'][3])
 lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 print(lst[3][1][2])
 
-#Create a function that grabs the email website domain from a string in the form: user@domain.com 
+#Create a function that grabs the email website domain from a string 
 var = 'user@domain.com'
 print(var.split('@')[1])
 
