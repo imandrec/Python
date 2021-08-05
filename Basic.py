@@ -16,7 +16,7 @@ print(lst[3][1][2])
 var = 'user@domain.com'
 print(var.split('@')[1])
 
-#Create a basic function that returns True if the word 'dog' is contained in the input string
+#Create a basic function that returns True if the word 'dog' is there
 findDog = ('Is there a dog here?')
 print('dog' in (findDog))
 
@@ -30,7 +30,7 @@ def caught_speeding(speed, is_birthday):
     if is_birthday:
         speeding = speed - 5;
     else:
-        speeding = speed;
+        speeding = speed; l
     if speeding > 80:
         return 'Big Ticket';
     elif speeding > 60:
