@@ -14,7 +14,7 @@ print(lst[3][1][2])
 var = 'user@domain.com'
 print(var.split('@')[1])
 
-#Create a basic function that returns True if the word 'dog'
+
 findDog = ('Is there a dog here?')
 print('dog' in (findDog))
 
