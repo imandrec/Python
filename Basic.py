@@ -18,7 +18,6 @@ print(var.split('@')[1])
 findDog = ('Is there a dog here?')
 print('dog' in (findDog))
 
-#Use lambda expressions and the filter() function to filter out words from a list that don't start with the letter 's'. 
 seq = ['blackberries','apple','apples','blueberries','kiwi']
 print(list(filter(lambda word: word[0]=='b',seq)))
 
