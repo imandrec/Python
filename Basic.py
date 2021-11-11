@@ -44,3 +44,25 @@ def countDog(st):
     return count
 x=countDog('This dog runs faster than the other dog dude!');
 print (x);
+
+
+#Guess number
+
+import random
+
+def numberGuess():
+  randNum = random.randrange(1,11) # this line generates a random number
+  guess = int(input("Try to guess the number:")) # ask user for a number
+  print (randNum)
+  while True:
+    if (guess == randNum):
+        print ("You got it!")
+        break
+    if (guess > randNum):
+        print ("Wrong! You guessed too high")
+        guess = int(input("Try to guess the number:"))  # ask user for a number
+    if (guess < randNum):
+        print ("Wrong! You guessed too low")
+        guess = int(input("Try to guess the number:"))  # ask user for a number
+
+numberGuess()
