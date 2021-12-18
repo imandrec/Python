@@ -1,12 +1,11 @@
-c0 = int(input("Enter a number"))
-if c0 > 1:
-    steps = 0
-    while True:
-        if c0 % 2 != 0:
-            cnew = 3 * c0 + 1
-        else:
-            cnew = c0 // 2
-        steps += 1
-    print("steps =", steps, cnew)
-else:
-    print("Bad c0 value")
+n = int(input("Enter a number: "))
+steps = 0
+while n != 1:
+    if n %2 != 0:
+        n = 3 * n + 1
+    else:
+        n = n // 2
+    steps += 1
+    print(n)
+print("steps: ",steps)
+        
