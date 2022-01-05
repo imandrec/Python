@@ -8,6 +8,7 @@ print('the diameter of {} is {} kilometers'.format(planet,diameter))
 d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}
 print(d['k1'][3]['tricky'][3]['target'][3])
 
+
 lst = [1,2,[3,4],[5,[100,200,['hello']],23,11],1,7]
 print(lst[3][1][2])
 
