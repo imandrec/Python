@@ -17,6 +17,7 @@ print(var.split('@')[1])
 findDog = ('Is there a dog here?')
 print('dog' in (findDog))
 
+
 seq = ['blackberries','apple','apples','blueberries','kiwi']
 print(list(filter(lambda word: word[0]=='b',seq)))
 #e of 3 possible icketIf your speed is 60 ss, the ret is "No Ticket". If speed is between 61 and 80 inclusive, the result is "Small Ticket". If speed is 81 or more, the result is "Big Ticket". Unless it is your birthday (encoded as a boolean value in the parameters of the function) -- on your birthday, your speed can be 5 higher in all cases
