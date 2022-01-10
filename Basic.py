@@ -34,7 +34,6 @@ def caught_speeding(speed, is_birthday):
         return 'No Ticket';
 print(caught_speeding(81,True));
 
-
 def countDog(st):
     count = 0
     for word in st.lower().split():
@@ -43,7 +42,6 @@ def countDog(st):
     return count
 x=countDog('This dog runs faster than the other dog dude!');
 print (x);
-
 
 #Guess number
 
