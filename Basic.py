@@ -1,6 +1,7 @@
 t=lambda var: var**4
 print(t(7))
 
+
 planet = "Earth"
 diameter = 12742
 print('the diameter of {} is {} kilometers'.format(planet,diameter))
